@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 
 class MobileController extends Controller
 {
-    public function connected()
-    {
+    public function connected(){
         return response([
             'message' => 'email update successfully'
         ], 200);
