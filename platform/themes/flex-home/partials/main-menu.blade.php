@@ -3,7 +3,7 @@
         <li class="menu-item @if ($row->has_child) menu-item-has-children @endif {{ $row->css_class }} @if ($row->active) current-menu-item @endif">
             <a href="{{ url($row->url) }}" target="{{ $row->target }}">
                 @if ($iconImage = $row->getMetadata('icon_image', true))
-                    <img src="{{ RvMedia::getImageUrl($iconImage) }}" alt="icon image" width="14" height="14" style="vertical-align: top; margin-top: 4px"/>
+                    <img src="{{ RvMedia::getImageUrl($iconImage) }}" alt="icon image" width="20" height="20" style="vertical-align: top; margin-top: 4px"/>
                 @elseif ($row->icon_font)<i class='{{ trim($row->icon_font) }}'></i> @endif{{ $row->title }}
             </a>
             @if ($row->has_child)

@@ -106,7 +106,7 @@
                         @if (theme_option('logo'))
                             <a class="navbar-brand" href="{{ route('public.index') }}">
                                 <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}"
-                                     class="logo" height="40" alt="{{ theme_option('site_name') }}">
+                                     class="logo" height="60" alt="{{ theme_option('site_name') }}">
                             </a>
                         @endif
                         <button class="navbar-toggler" type="button" data-toggle="collapse"

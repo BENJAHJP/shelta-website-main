@@ -137,7 +137,7 @@
                                     <td></td>
                                     <td>TX</td>
                                     <td></td>
-                                    <td>United States</td>
+                                    <td>KENYA</td>
                                     <td>state</td>
                                     <td>published</td>
                                     <td>0</td>
@@ -150,11 +150,11 @@
                                     @endif
                                 </tr>
                                 <tr>
-                                    <td>Washington</td>
+                                    <td>NAIROBI</td>
                                     <td></td>
-                                    <td>WA</td>
+                                    <td>KE</td>
                                     <td></td>
-                                    <td>United States</td>
+                                    <td>KENYAs</td>
                                     <td>state</td>
                                     <td>published</td>
                                     <td>0</td>

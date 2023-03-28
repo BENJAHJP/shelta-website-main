@@ -10,5 +10,8 @@
         <li>
             <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ $description }}" target="_blank" title="{{ __('Share on Twitter') }}"><i class="fab fa-twitter"></i></a>
         </li>
+        <li>
+            <a href="http://linkedin.com"></a>
+        </li>
     </ul>
 </div>
