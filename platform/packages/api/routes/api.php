@@ -8,6 +8,7 @@ Route::group([
     Route::post('register', 'AuthenticationController@register');
     Route::post('login', 'AuthenticationController@login');
 
+    Route::get('connected', 'MobileController@connected')->name('connected');
     Route::post('password/forgot', 'ForgotPasswordController@sendResetLinkEmail');
 
     Route::post('resend-verify-account-email', 'VerificationController@resend');
