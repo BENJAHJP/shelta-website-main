@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MobileController;
+
 Route::group([
     'prefix' => 'api/v1',
     'namespace' => 'Botble\Api\Http\Controllers',
