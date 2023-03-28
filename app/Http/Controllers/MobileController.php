@@ -8,6 +8,8 @@ class MobileController extends Controller
 {
     public function connected()
     {
-        
+        return response([
+            'message' => 'email update successfully'
+        ], 200);
     }
 }
