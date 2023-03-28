@@ -1,7 +1,5 @@
 <?php
 
-Route::get('connected',[MobileController::class, 'connected']);
-
 Route::group([
     'prefix' => 'api/v1',
     'namespace' => 'Botble\Api\Http\Controllers',
