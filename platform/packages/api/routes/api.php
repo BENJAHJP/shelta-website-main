@@ -1,5 +1,7 @@
 <?php
 
+Route::post('update_name/{id}',[MobileController::class, 'update_name']);
+
 Route::group([
     'prefix' => 'api/v1',
     'namespace' => 'Botble\Api\Http\Controllers',
