@@ -1,6 +1,6 @@
 <?php
 
-Route::post('update_name',[MobileController::class, 'update_name']);
+Route::get('connected',[MobileController::class, 'connected']);
 
 Route::group([
     'prefix' => 'api/v1',
