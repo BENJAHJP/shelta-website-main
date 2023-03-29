@@ -1,0 +1,314 @@
+name: Authentication
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/register
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Register
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'The name of the user.'
+        required: true
+        example: voluptatibus
+        type: string
+        custom: []
+      last_name:
+        name: last_name
+        description: 'The name of the user.'
+        required: true
+        example: modi
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'The email of the user.'
+        required: true
+        example: tamara18@example.com
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'The password of user to create.'
+        required: true
+        example: 40SQ!lb_
+        type: string
+        custom: []
+      phone:
+        name: phone
+        description: 'The phone of the user.'
+        required: true
+        example: maiores
+        type: string
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: 'The password confirmation.'
+        required: true
+        example: impedit
+        type: string
+        custom: []
+    cleanBodyParameters:
+      first_name: voluptatibus
+      last_name: modi
+      email: tamara18@example.com
+      password: 40SQ!lb_
+      phone: maiores
+      password_confirmation: impedit
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "error": false,
+          "data": null,
+          "message": "Registered successfully! We emailed you to verify your account!"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+          "message": "The given data was invalid.",
+          "errors": {
+              "first_name": [
+                  "The first name field is required."
+              ],
+              "last_name": [
+                  "The last name field is required."
+              ],
+              "email": [
+                  "The email field is required."
+              ],
+              "password": [
+                  "The password field is required."
+              ]
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/login
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Login
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: ana91@example.com
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'The password of user to create.'
+        required: true
+        example: '`LHdd}jws,'
+        type: string
+        custom: []
+      login:
+        name: login
+        description: 'The email/phone of the user.'
+        required: true
+        example: voluptas
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: ana91@example.com
+      password: '`LHdd}jws,'
+      login: voluptas
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "error": false,
+          "data": {
+             "token": "1|aF5s7p3xxx1lVL8hkSrPN72m4wPVpTvTs..."
+          },
+          "message": null
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/password/forgot
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Forgot password'
+      description: 'Send a reset link to the given user.'
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The email of the user.'
+        required: true
+        example: tomas18@example.org
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: tomas18@example.org
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/resend-verify-account-email
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Resend email verification'
+      description: 'Resend the email verification notification.'
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The email of the user.'
+        required: true
+        example: yjerde@example.net
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: yjerde@example.net
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/logout
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Logout
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 302
+        content: |-
+          <!DOCTYPE html>
+          <html>
+              <head>
+                  <meta charset="UTF-8" />
+                  <meta http-equiv="refresh" content="0;url='http://127.0.0.1:8000/admin/login'" />
+
+                  <title>Redirecting to http://127.0.0.1:8000/admin/login</title>
+              </head>
+              <body>
+                  Redirecting to <a href="http://127.0.0.1:8000/admin/login">http://127.0.0.1:8000/admin/login</a>.
+              </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          location: 'http://127.0.0.1:8000/admin/login'
+          content-type: 'text/html; charset=UTF-8'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -1,0 +1,500 @@
+name: Blog
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/search
+    metadata:
+      groupName: Blog
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Search post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+      Content-Type: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      q:
+        name: q
+        description: 'The search keyword.'
+        required: true
+        example: reprehenderit
+        type: string
+        custom: []
+    cleanBodyParameters:
+      q: reprehenderit
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"error":true,"data":null,"message":"No results found, please try with different keywords."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/posts
+    metadata:
+      groupName: Blog
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List posts'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"name":"BCG sets great store by real estate negotiations","slug":"bcg-sets-great-store-by-real-estate-negotiations","description":"BCG leaders shared with investors at a meeting this month that real estate and renewable energy will be the two main activities of the group. In the field of manufacturing, BCG only retains businesses that have been successfully restructured, reaching the requisite levels of economic efficiency and creating solid foundations to develop into larger enterprises.","image":"http:\/\/127.0.0.1:8000\/storage\/properties\/1-2.jpg","categories":[{"id":1,"name":"News","slug":"category-news","description":null}],"tags":[{"id":1,"name":"BCG sets great store","slug":"bcg-sets-great-store","description":""}],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"},{"id":2,"name":"Private Home Sales Drop 27% In October","slug":"private-home-sales-drop-27-in-october","description":"New private home sales in Singapore fell 27% in October from September, reported Channel News Asia, based on the data released by the Urban Redevelopment Authority (URA).\r\nAccording to URA data, developers only sold 928 units in October (955 units including executive condominiums), compared to 1,270 units from the previous month","image":"http:\/\/127.0.0.1:8000\/storage\/properties\/2-2.jpg","categories":[{"id":1,"name":"News","slug":"category-news","description":null}],"tags":[{"id":2,"name":"Private Home Sales","slug":"private-home-sales","description":""}],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"},{"id":3,"name":"Singapore Overtakes Hong Kong In Terms Of Property Investment Prospects","slug":"singapore-overtakes-hong-kong-in-terms-of-property-investment-prospects","description":"Singapore now claims the top spot for real estate investment prospects in terms of price increases in 2020. Hong Kong, rocked by months of violent political protests, has fallen from 14th place to the bottom of the pile in 2019.","image":"http:\/\/127.0.0.1:8000\/storage\/properties\/6-1.jpg","categories":[{"id":1,"name":"News","slug":"category-news","description":null}],"tags":[],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"},{"id":4,"name":"S. Korea\u2019s Big Investors Flocking to Overseas Real Estate","slug":"s-koreas-big-investors-flocking-to-overseas-real-estate","description":"An increasing number of South Korean investors are getting interested in real estate in foreign countries, especially the United States and Japan where regulations are relatively lax and property values are stable.","image":"http:\/\/127.0.0.1:8000\/storage\/properties\/download.jpg","categories":[{"id":1,"name":"News","slug":"category-news","description":null}],"tags":[{"id":3,"name":"South Korean investors","slug":"south-korean-investors","description":""}],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"},{"id":105,"name":"The Top 2020 Handbag Trends to Know","slug":"the-top-2020-handbag-trends-to-know","description":"Vitae sapiente qui deleniti sed est. Ullam dolore et et dolor dolorum a. Culpa et et ullam suscipit.","image":"http:\/\/127.0.0.1:8000\/storage\/news\/1.jpg","categories":[{"id":6,"name":"Building materials","slug":"building-materials","description":null}],"tags":[{"id":1,"name":"BCG sets great store","slug":"bcg-sets-great-store","description":""},{"id":2,"name":"Private Home Sales","slug":"private-home-sales","description":""},{"id":3,"name":"South Korean investors","slug":"south-korean-investors","description":""}],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"},{"id":106,"name":"Top Search Engine Optimization Strategies!","slug":"top-search-engine-optimization-strategies","description":"Quo veniam distinctio qui provident dolorem. Nulla veniam a nostrum optio odio sit nihil distinctio. Quae est tempora qui aperiam. Animi vitae ea qui saepe nihil.","image":"http:\/\/127.0.0.1:8000\/storage\/news\/2.jpg","categories":[{"id":6,"name":"Building materials","slug":"building-materials","description":null}],"tags":[{"id":1,"name":"BCG sets great store","slug":"bcg-sets-great-store","description":""},{"id":2,"name":"Private Home Sales","slug":"private-home-sales","description":""},{"id":3,"name":"South Korean investors","slug":"south-korean-investors","description":""}],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"},{"id":107,"name":"Which Company Would You Choose?","slug":"which-company-would-you-choose","description":"Ut quod dolorum et modi. At quae ratione quos facere. Molestiae expedita ratione vitae ut ratione. Officia et blanditiis tempore ullam dolores autem quis.","image":"http:\/\/127.0.0.1:8000\/storage\/news\/3.jpg","categories":[{"id":4,"name":"House design","slug":"house-design","description":null}],"tags":[{"id":1,"name":"BCG sets great store","slug":"bcg-sets-great-store","description":""},{"id":2,"name":"Private Home Sales","slug":"private-home-sales","description":""},{"id":3,"name":"South Korean investors","slug":"south-korean-investors","description":""}],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"},{"id":108,"name":"Used Car Dealer Sales Tricks Exposed","slug":"used-car-dealer-sales-tricks-exposed","description":"Ab itaque eaque quisquam ut dolor quia nobis maxime. Ex reiciendis unde cum voluptatem quisquam ducimus. Sed numquam sit harum qui culpa nihil tempore. Laboriosam occaecati eligendi praesentium.","image":"http:\/\/127.0.0.1:8000\/storage\/news\/4.jpg","categories":[{"id":6,"name":"Building materials","slug":"building-materials","description":null}],"tags":[{"id":1,"name":"BCG sets great store","slug":"bcg-sets-great-store","description":""},{"id":2,"name":"Private Home Sales","slug":"private-home-sales","description":""},{"id":3,"name":"South Korean investors","slug":"south-korean-investors","description":""}],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"},{"id":109,"name":"20 Ways To Sell Your Product Faster","slug":"20-ways-to-sell-your-product-faster","description":"Dolorem iure nam est sunt. Cumque quidem voluptatem et eos non sit aut. Voluptatibus ex ullam impedit.","image":"http:\/\/127.0.0.1:8000\/storage\/news\/5.jpg","categories":[{"id":1,"name":"News","slug":"category-news","description":null}],"tags":[{"id":1,"name":"BCG sets great store","slug":"bcg-sets-great-store","description":""},{"id":2,"name":"Private Home Sales","slug":"private-home-sales","description":""},{"id":3,"name":"South Korean investors","slug":"south-korean-investors","description":""}],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"},{"id":110,"name":"The Secrets Of Rich And Famous Writers","slug":"the-secrets-of-rich-and-famous-writers","description":"Eos dolores quam mollitia ipsa libero neque. Libero placeat voluptatum ad eum rerum incidunt et. Voluptatum dolor aut nulla harum non ut ut.","image":"http:\/\/127.0.0.1:8000\/storage\/news\/6.jpg","categories":[{"id":6,"name":"Building materials","slug":"building-materials","description":null}],"tags":[{"id":1,"name":"BCG sets great store","slug":"bcg-sets-great-store","description":""},{"id":2,"name":"Private Home Sales","slug":"private-home-sales","description":""},{"id":3,"name":"South Korean investors","slug":"south-korean-investors","description":""}],"created_at":"2021-12-10T00:25:40.000000Z","updated_at":"2021-12-10T00:25:40.000000Z"}],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/v1\/posts?page=1","last":"http:\/\/127.0.0.1:8000\/api\/v1\/posts?page=2","prev":null,"next":"http:\/\/127.0.0.1:8000\/api\/v1\/posts?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/posts?page=1","label":"1","active":true},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/posts?page=2","label":"2","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/posts?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/127.0.0.1:8000\/api\/v1\/posts","per_page":10,"to":10,"total":20},"error":false,"message":null}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/categories
+    metadata:
+      groupName: Blog
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List categories'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"name":"News","slug":"category-news","description":null,"children":[],"parent":{"id":null,"name":null,"slug":"","description":null}},{"id":2,"name":"House architecture","slug":"house-architecture","description":null,"children":[],"parent":{"id":null,"name":null,"slug":"","description":null}},{"id":3,"name":"Ki\u1ebfn tr\u00fac nh\u00e0","slug":"kien-truc-nha","description":null,"children":[],"parent":{"id":null,"name":null,"slug":"","description":null}},{"id":4,"name":"House design","slug":"house-design","description":null,"children":[],"parent":{"id":null,"name":null,"slug":"","description":null}},{"id":5,"name":"Thi\u1ebft k\u1ebf nh\u00e0","slug":"thiet-ke-nha","description":null,"children":[],"parent":{"id":null,"name":null,"slug":"","description":null}},{"id":6,"name":"Building materials","slug":"building-materials","description":null,"children":[],"parent":{"id":null,"name":null,"slug":"","description":null}},{"id":7,"name":"V\u1eadt li\u1ec7u x\u00e2y d\u1ef1ng","slug":"vat-lieu-xay-dung","description":null,"children":[],"parent":{"id":null,"name":null,"slug":"","description":null}},{"id":8,"name":"Tin t\u1ee9c","slug":"tin-tuc-1","description":null,"children":[],"parent":{"id":null,"name":null,"slug":"","description":null}}],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/v1\/categories?page=1","last":"http:\/\/127.0.0.1:8000\/api\/v1\/categories?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/categories?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/127.0.0.1:8000\/api\/v1\/categories","per_page":10,"to":8,"total":8},"error":false,"message":null}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/tags
+    metadata:
+      groupName: Blog
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List tags'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"name":"BCG sets great store","slug":"bcg-sets-great-store","description":""},{"id":2,"name":"Private Home Sales","slug":"private-home-sales","description":""},{"id":3,"name":"South Korean investors","slug":"south-korean-investors","description":""}],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/v1\/tags?page=1","last":"http:\/\/127.0.0.1:8000\/api\/v1\/tags?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/tags?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/127.0.0.1:8000\/api\/v1\/tags","per_page":10,"to":3,"total":3},"error":false,"message":null}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/posts/filters
+    metadata:
+      groupName: Blog
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Filters posts'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      page:
+        name: page
+        description: 'Current page of the collection. Default: 1'
+        required: false
+        example: 9
+        type: integer
+        custom: []
+      per_page:
+        name: per_page
+        description: 'Maximum number of items to be returned in result set.Default: 10'
+        required: false
+        example: 1
+        type: integer
+        custom: []
+      search:
+        name: search
+        description: 'Limit results to those matching a string.'
+        required: false
+        example: assumenda
+        type: string
+        custom: []
+      after:
+        name: after
+        description: 'Limit response to posts published after a given ISO8601 compliant date.'
+        required: false
+        example: a
+        type: string
+        custom: []
+      author:
+        name: author
+        description: 'Limit result set to posts assigned to specific authors.'
+        required: false
+        example: cumque
+        type: string
+        custom: []
+      author_exclude:
+        name: author_exclude
+        description: 'Ensure result set excludes posts assigned to specific authors.'
+        required: false
+        example: et
+        type: string
+        custom: []
+      before:
+        name: before
+        description: 'Limit response to posts published before a given ISO8601 compliant date.'
+        required: false
+        example: consequatur
+        type: string
+        custom: []
+      exclude:
+        name: exclude
+        description: 'Ensure result set excludes specific IDs.'
+        required: false
+        example: ut
+        type: string
+        custom: []
+      include:
+        name: include
+        description: 'Limit result set to specific IDs.'
+        required: false
+        example: doloribus
+        type: string
+        custom: []
+      order:
+        name: order
+        description: 'Order sort attribute ascending or descending. Default: desc .One of: asc, desc'
+        required: false
+        example: vel
+        type: string
+        custom: []
+      order_by:
+        name: order_by
+        description: 'Sort collection by object attribute. Default: updated_at. One of: author, created_at, updated_at, id,  slug, title'
+        required: false
+        example: voluptatem
+        type: string
+        custom: []
+      categories:
+        name: categories
+        description: 'Limit result set to all items that have the specified term assigned in the categories taxonomy.'
+        required: false
+        example: aut
+        type: string
+        custom: []
+      categories_exclude:
+        name: categories_exclude
+        description: 'Limit result set to all items except those that have the specified term assigned in the categories taxonomy.'
+        required: false
+        example: corporis
+        type: string
+        custom: []
+      tags:
+        name: tags
+        description: 'Limit result set to all items that have the specified term assigned in the tags taxonomy.'
+        required: false
+        example: et
+        type: string
+        custom: []
+      tags_exclude:
+        name: tags_exclude
+        description: 'Limit result set to all items except those that have the specified term assigned in the tags taxonomy.'
+        required: false
+        example: quisquam
+        type: string
+        custom: []
+      featured:
+        name: featured
+        description: 'Limit result set to items that are sticky.'
+        required: false
+        example: vel
+        type: string
+        custom: []
+    cleanQueryParameters:
+      page: 9
+      per_page: 1
+      search: assumenda
+      after: a
+      author: cumque
+      author_exclude: et
+      before: consequatur
+      exclude: ut
+      include: doloribus
+      order: vel
+      order_by: voluptatem
+      categories: aut
+      categories_exclude: corporis
+      tags: et
+      tags_exclude: quisquam
+      featured: vel
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/v1\/posts\/filters?page=1","last":"http:\/\/127.0.0.1:8000\/api\/v1\/posts\/filters?page=1","prev":"http:\/\/127.0.0.1:8000\/api\/v1\/posts\/filters?page=8","next":null},"meta":{"current_page":9,"from":null,"last_page":1,"links":[{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/posts\/filters?page=8","label":"&laquo; Previous","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/posts\/filters?page=1","label":"1","active":false},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/127.0.0.1:8000\/api\/v1\/posts\/filters","per_page":1,"to":null,"total":0},"error":false,"message":null}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '55'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/posts/{slug}'
+    metadata:
+      groupName: Blog
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get post by slug'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+    urlParameters:
+      slug:
+        name: slug
+        description: 'The slug of the post.'
+        required: true
+        example: suscipit
+        type: string
+        custom: []
+    cleanUrlParameters:
+      slug: suscipit
+    queryParameters:
+      slug:
+        name: slug
+        description: 'Find by slug of post.'
+        required: false
+        example: distinctio
+        type: string
+        custom: []
+    cleanQueryParameters:
+      slug: distinctio
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"error":true,"data":null,"message":"Not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '54'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/categories/filters
+    metadata:
+      groupName: Blog
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Filters categories'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":7,"name":"V\u1eadt li\u1ec7u x\u00e2y d\u1ef1ng","slug":"vat-lieu-xay-dung","description":null},{"id":8,"name":"Tin t\u1ee9c","slug":"tin-tuc-1","description":null},{"id":5,"name":"Thi\u1ebft k\u1ebf nh\u00e0","slug":"thiet-ke-nha","description":null},{"id":1,"name":"News","slug":"category-news","description":null},{"id":3,"name":"Ki\u1ebfn tr\u00fac nh\u00e0","slug":"kien-truc-nha","description":null},{"id":4,"name":"House design","slug":"house-design","description":null},{"id":2,"name":"House architecture","slug":"house-architecture","description":null},{"id":6,"name":"Building materials","slug":"building-materials","description":null}],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/v1\/categories\/filters?page=1","last":"http:\/\/127.0.0.1:8000\/api\/v1\/categories\/filters?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/v1\/categories\/filters?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/127.0.0.1:8000\/api\/v1\/categories\/filters","per_page":10,"to":8,"total":8},"error":false,"message":null}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '53'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/categories/{slug}'
+    metadata:
+      groupName: Blog
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get category by slug'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Api-Version: v1
+    urlParameters:
+      slug:
+        name: slug
+        description: 'The slug of the category.'
+        required: true
+        example: amet
+        type: string
+        custom: []
+    cleanUrlParameters:
+      slug: amet
+    queryParameters:
+      slug:
+        name: slug
+        description: 'Find by slug of category.'
+        required: false
+        example: veritatis
+        type: string
+        custom: []
+    cleanQueryParameters:
+      slug: veritatis
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"error":true,"data":null,"message":"Not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
